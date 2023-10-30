@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace QuanLyBenXe
 {
-    public partial class Form1 : Form
+    public partial class QuanLyTuyenXe : Form
     {
-        public Form1()
+        public QuanLyTuyenXe()
         {
             InitializeComponent();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
