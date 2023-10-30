@@ -16,5 +16,10 @@ namespace QuanLyBenXe
         {
             InitializeComponent();
         }
+
+        private void QuanLyXe_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
