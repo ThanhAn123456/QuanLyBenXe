@@ -108,6 +108,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="QuanLyXe.resx">
       <DependentUpon>QuanLyXe.cs</DependentUpon>
+	</EmbeddedResource>
     <EmbeddedResource Include="QuanLyLichTrinh.resx">
       <DependentUpon>QuanLyLichTrinh.cs</DependentUpon>
     </EmbeddedResource>
