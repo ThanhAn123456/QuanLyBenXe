@@ -97,6 +97,11 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="QuanLyKhachHang.resx">
+      <DependentUpon>QuanLyKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyXe.resx">
+      <DependentUpon>QuanLyXe.cs</DependentUpon>
     <EmbeddedResource Include="QuanLyLichTrinh.resx">
       <DependentUpon>QuanLyLichTrinh.cs</DependentUpon>
     </EmbeddedResource>
