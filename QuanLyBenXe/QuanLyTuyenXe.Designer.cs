@@ -213,6 +213,7 @@ namespace QuanLyBenXe
             this.Controls.Add(this.label1);
             this.Name = "QuanLyTuyenXe";
             this.Text = "QuanLyTuyenXe";
+            this.Load += new System.EventHandler(this.QuanLyTuyenXe_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvQuanLyBenXe)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
