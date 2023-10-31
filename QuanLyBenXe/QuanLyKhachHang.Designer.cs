@@ -329,6 +329,7 @@ namespace QuanLyBenXe
             this.Controls.Add(this.menuStrip1);
             this.Name = "QuanLyKhachHang";
             this.Text = "QuanLyKhachHang";
+            this.Load += new System.EventHandler(this.QuanLyKhachHang_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grvQuanLyKhachHang)).EndInit();
