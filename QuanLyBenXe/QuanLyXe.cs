@@ -24,5 +24,12 @@ namespace QuanLyBenXe
             sql = "select * from xe";
             grvQuanLyXe.DataSource = xuly.getTable(sql);
         }
+
+        private void grvQuanLyXe_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtMaXe.Text = grvQuanLyXe.Rows[e.RowIndex].Cells["ma_xe"].FormattedValue.ToString();
+            txtTenXe.Text = grvQuanLyXe.Rows[e.RowIndex].Cells["ten_xe"].FormattedValue.ToString();
+            txtSoGhe.Text = grvQuanLyXe.Rows[e.RowIndex].Cells["so_ghe"].FormattedValue.ToString();
+        }
     }
 }

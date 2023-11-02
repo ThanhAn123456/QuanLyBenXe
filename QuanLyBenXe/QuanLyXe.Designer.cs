@@ -179,6 +179,7 @@ namespace QuanLyBenXe
             this.grvQuanLyXe.RowTemplate.Height = 24;
             this.grvQuanLyXe.Size = new System.Drawing.Size(672, 155);
             this.grvQuanLyXe.TabIndex = 9;
+            this.grvQuanLyXe.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grvQuanLyXe_CellClick);
             // 
             // btnLamMoi
             // 
