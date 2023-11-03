@@ -12,9 +12,17 @@ namespace QuanLyBenXe
 {
     public partial class QuanLyKhachHang : Form
     {
+        XULYDULIEU xuly = new XULYDULIEU();
+        String sql;
         public QuanLyKhachHang()
         {
             InitializeComponent();
+        }
+
+        private void QuanLyKhachHang_Load(object sender, EventArgs e)
+        {
+            sql = "select * from khach_hang";
+            grvQuanLyKhachHang.DataSource = xuly.getTable(sql);
         }
     }
 }
