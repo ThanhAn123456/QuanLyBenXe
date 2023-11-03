@@ -33,5 +33,17 @@ namespace QuanLyBenXe
             QuanLyKhachHang quanLyKhachHang = new QuanLyKhachHang();
             quanLyKhachHang.Show();
         }
+
+        private void quảnLýTuyếnXeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            QuanLyTuyenXe quanLyTuyenXe = new QuanLyTuyenXe();
+            quanLyTuyenXe.Show();
+        }
+
+        private void quảnLýBếnXeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            QuanLyBenXe quanLyBenXe = new QuanLyBenXe();
+            quanLyBenXe.Show();
+        }
     }
 }
