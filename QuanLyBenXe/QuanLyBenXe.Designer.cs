@@ -46,6 +46,9 @@ namespace QuanLyBenXe
             this.label1 = new System.Windows.Forms.Label();
             this.txtSDT = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.btnDbToXML = new System.Windows.Forms.Button();
+            this.btnXmlToDb = new System.Windows.Forms.Button();
+            this.showFileXml = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQuanLyBenXe)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,6 +60,8 @@ namespace QuanLyBenXe
             this.cbQuanLyBenXe.Name = "cbQuanLyBenXe";
             this.cbQuanLyBenXe.Size = new System.Drawing.Size(200, 40);
             this.cbQuanLyBenXe.TabIndex = 29;
+            this.cbQuanLyBenXe.SelectedIndexChanged += new System.EventHandler(this.cbQuanLyBenXe_SelectedIndexChanged);
+            this.cbQuanLyBenXe.SelectedValueChanged += new System.EventHandler(this.cbQuanLyBenXe_SelectedValueChanged);
             // 
             // btnTimKiem
             // 
@@ -67,6 +72,7 @@ namespace QuanLyBenXe
             this.btnTimKiem.TabIndex = 28;
             this.btnTimKiem.Text = "Tìm kiếm";
             this.btnTimKiem.UseVisualStyleBackColor = true;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // txtTimKiem
             // 
@@ -85,6 +91,7 @@ namespace QuanLyBenXe
             this.btnLamMoi.TabIndex = 26;
             this.btnLamMoi.Text = "Làm mới";
             this.btnLamMoi.UseVisualStyleBackColor = true;
+            this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
             // 
             // btnXoa
             // 
@@ -95,6 +102,7 @@ namespace QuanLyBenXe
             this.btnXoa.TabIndex = 25;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnSua
             // 
@@ -105,6 +113,7 @@ namespace QuanLyBenXe
             this.btnSua.TabIndex = 24;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnThem
             // 
@@ -115,6 +124,7 @@ namespace QuanLyBenXe
             this.btnThem.TabIndex = 23;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // dgvQuanLyBenXe
             // 
@@ -125,6 +135,7 @@ namespace QuanLyBenXe
             this.dgvQuanLyBenXe.RowTemplate.Height = 28;
             this.dgvQuanLyBenXe.Size = new System.Drawing.Size(522, 210);
             this.dgvQuanLyBenXe.TabIndex = 22;
+            this.dgvQuanLyBenXe.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvQuanLyBenXe_CellClick);
             // 
             // txtDiaChi
             // 
@@ -209,12 +220,48 @@ namespace QuanLyBenXe
             this.label5.TabIndex = 30;
             this.label5.Text = "Số điện thoại:";
             // 
+            // btnDbToXML
+            // 
+            this.btnDbToXML.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDbToXML.Location = new System.Drawing.Point(527, 241);
+            this.btnDbToXML.Name = "btnDbToXML";
+            this.btnDbToXML.Size = new System.Drawing.Size(136, 44);
+            this.btnDbToXML.TabIndex = 32;
+            this.btnDbToXML.Text = "DbToXml";
+            this.btnDbToXML.UseVisualStyleBackColor = true;
+            this.btnDbToXML.Click += new System.EventHandler(this.btnDbToXML_Click);
+            // 
+            // btnXmlToDb
+            // 
+            this.btnXmlToDb.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXmlToDb.Location = new System.Drawing.Point(723, 241);
+            this.btnXmlToDb.Name = "btnXmlToDb";
+            this.btnXmlToDb.Size = new System.Drawing.Size(151, 44);
+            this.btnXmlToDb.TabIndex = 33;
+            this.btnXmlToDb.Text = "XmlToDb";
+            this.btnXmlToDb.UseVisualStyleBackColor = true;
+            this.btnXmlToDb.Click += new System.EventHandler(this.btnXmlToDb_Click);
+            // 
+            // showFileXml
+            // 
+            this.showFileXml.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.showFileXml.Location = new System.Drawing.Point(599, 486);
+            this.showFileXml.Name = "showFileXml";
+            this.showFileXml.Size = new System.Drawing.Size(200, 44);
+            this.showFileXml.TabIndex = 34;
+            this.showFileXml.Text = "Xem file Xml";
+            this.showFileXml.UseVisualStyleBackColor = true;
+            this.showFileXml.Click += new System.EventHandler(this.showFileXml_Click);
+            // 
             // QuanLyBenXe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(981, 557);
+            this.Controls.Add(this.showFileXml);
+            this.Controls.Add(this.btnXmlToDb);
+            this.Controls.Add(this.btnDbToXML);
             this.Controls.Add(this.txtSDT);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.cbQuanLyBenXe);
@@ -234,6 +281,7 @@ namespace QuanLyBenXe
             this.Controls.Add(this.label1);
             this.Name = "QuanLyBenXe";
             this.Text = "QuanLyBenXe";
+            this.Load += new System.EventHandler(this.QuanLyBenXe_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvQuanLyBenXe)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -259,5 +307,8 @@ namespace QuanLyBenXe
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtSDT;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btnDbToXML;
+        private System.Windows.Forms.Button btnXmlToDb;
+        private System.Windows.Forms.Button showFileXml;
     }
 }

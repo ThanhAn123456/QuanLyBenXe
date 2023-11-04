@@ -12,6 +12,8 @@ namespace QuanLyBenXe
 {
     public partial class QuanLyXe : Form
     {
+        XULYDULIEU xuly = new XULYDULIEU();
+        String sql;
         public QuanLyXe()
         {
             InitializeComponent();
@@ -19,7 +21,8 @@ namespace QuanLyBenXe
 
         private void QuanLyXe_Load(object sender, EventArgs e)
         {
-
+            sql = "select * from xe";
+            grvQuanLyXe.DataSource = xuly.getTable(sql);
         }
     }
 }
