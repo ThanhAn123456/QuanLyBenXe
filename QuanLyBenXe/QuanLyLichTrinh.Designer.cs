@@ -29,83 +29,43 @@ namespace QuanLyBenXe
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnXoa = new System.Windows.Forms.Button();
-            this.btnThem = new System.Windows.Forms.Button();
-            this.btnCapNhat = new System.Windows.Forms.Button();
-            this.btnLamMoi = new System.Windows.Forms.Button();
-            this.txtSoGhe = new System.Windows.Forms.TextBox();
-            this.txtTenXe = new System.Windows.Forms.TextBox();
+            this.txtMaTuyenXe = new System.Windows.Forms.TextBox();
+            this.txtMaBenXe = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtMaXe = new System.Windows.Forms.TextBox();
+            this.txtMaLichTrinh = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtGioDi = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtNgayDi = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtMaKhachHang = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtMaXe = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtGiaVe = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.btnTimKiem = new System.Windows.Forms.Button();
-            this.txtTimKiem = new System.Windows.Forms.TextBox();
-            this.cbbTimKiem = new System.Windows.Forms.ComboBox();
-            this.grvQuanLyXe = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.grvQuanLyXe)).BeginInit();
+            this.dvgQuanLyLichTrinh = new System.Windows.Forms.DataGridView();
+            this.XMLTODB = new System.Windows.Forms.Button();
+            this.DBTOXML = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dvgQuanLyLichTrinh)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnXoa
+            // txtMaTuyenXe
             // 
-            this.btnXoa.Location = new System.Drawing.Point(208, 461);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(111, 38);
-            this.btnXoa.TabIndex = 24;
-            this.btnXoa.Text = "Xóa";
-            this.btnXoa.UseVisualStyleBackColor = true;
+            this.txtMaTuyenXe.Location = new System.Drawing.Point(208, 163);
+            this.txtMaTuyenXe.Name = "txtMaTuyenXe";
+            this.txtMaTuyenXe.Size = new System.Drawing.Size(188, 22);
+            this.txtMaTuyenXe.TabIndex = 20;
             // 
-            // btnThem
+            // txtMaBenXe
             // 
-            this.btnThem.Location = new System.Drawing.Point(208, 533);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(111, 38);
-            this.btnThem.TabIndex = 23;
-            this.btnThem.Text = "Thêm";
-            this.btnThem.UseVisualStyleBackColor = true;
-            // 
-            // btnCapNhat
-            // 
-            this.btnCapNhat.Location = new System.Drawing.Point(54, 533);
-            this.btnCapNhat.Name = "btnCapNhat";
-            this.btnCapNhat.Size = new System.Drawing.Size(111, 38);
-            this.btnCapNhat.TabIndex = 22;
-            this.btnCapNhat.Text = "Cập Nhật";
-            this.btnCapNhat.UseVisualStyleBackColor = true;
-            // 
-            // btnLamMoi
-            // 
-            this.btnLamMoi.Location = new System.Drawing.Point(55, 461);
-            this.btnLamMoi.Name = "btnLamMoi";
-            this.btnLamMoi.Size = new System.Drawing.Size(111, 38);
-            this.btnLamMoi.TabIndex = 21;
-            this.btnLamMoi.Text = "Làm mới";
-            this.btnLamMoi.UseVisualStyleBackColor = true;
-            // 
-            // txtSoGhe
-            // 
-            this.txtSoGhe.Location = new System.Drawing.Point(208, 163);
-            this.txtSoGhe.Name = "txtSoGhe";
-            this.txtSoGhe.Size = new System.Drawing.Size(188, 22);
-            this.txtSoGhe.TabIndex = 20;
-            // 
-            // txtTenXe
-            // 
-            this.txtTenXe.Location = new System.Drawing.Point(208, 116);
-            this.txtTenXe.Name = "txtTenXe";
-            this.txtTenXe.Size = new System.Drawing.Size(188, 22);
-            this.txtTenXe.TabIndex = 19;
+            this.txtMaBenXe.Location = new System.Drawing.Point(208, 116);
+            this.txtMaBenXe.Name = "txtMaBenXe";
+            this.txtMaBenXe.Size = new System.Drawing.Size(188, 22);
+            this.txtMaBenXe.TabIndex = 19;
             // 
             // label4
             // 
@@ -127,12 +87,12 @@ namespace QuanLyBenXe
             this.label3.TabIndex = 17;
             this.label3.Text = "Mã bến xe: ";
             // 
-            // txtMaXe
+            // txtMaLichTrinh
             // 
-            this.txtMaXe.Location = new System.Drawing.Point(208, 65);
-            this.txtMaXe.Name = "txtMaXe";
-            this.txtMaXe.Size = new System.Drawing.Size(188, 22);
-            this.txtMaXe.TabIndex = 16;
+            this.txtMaLichTrinh.Location = new System.Drawing.Point(208, 65);
+            this.txtMaLichTrinh.Name = "txtMaLichTrinh";
+            this.txtMaLichTrinh.Size = new System.Drawing.Size(188, 22);
+            this.txtMaLichTrinh.TabIndex = 16;
             // 
             // label2
             // 
@@ -154,12 +114,12 @@ namespace QuanLyBenXe
             this.label1.TabIndex = 14;
             this.label1.Text = "Quản Lý lịch trình";
             // 
-            // textBox1
+            // txtGioDi
             // 
-            this.textBox1.Location = new System.Drawing.Point(208, 355);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(188, 22);
-            this.textBox1.TabIndex = 26;
+            this.txtGioDi.Location = new System.Drawing.Point(208, 355);
+            this.txtGioDi.Name = "txtGioDi";
+            this.txtGioDi.Size = new System.Drawing.Size(188, 22);
+            this.txtGioDi.TabIndex = 26;
             // 
             // label5
             // 
@@ -171,12 +131,12 @@ namespace QuanLyBenXe
             this.label5.TabIndex = 25;
             this.label5.Text = "Giờ đi: ";
             // 
-            // textBox2
+            // txtNgayDi
             // 
-            this.textBox2.Location = new System.Drawing.Point(208, 303);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(188, 22);
-            this.textBox2.TabIndex = 28;
+            this.txtNgayDi.Location = new System.Drawing.Point(208, 303);
+            this.txtNgayDi.Name = "txtNgayDi";
+            this.txtNgayDi.Size = new System.Drawing.Size(188, 22);
+            this.txtNgayDi.TabIndex = 28;
             // 
             // label6
             // 
@@ -188,12 +148,12 @@ namespace QuanLyBenXe
             this.label6.TabIndex = 27;
             this.label6.Text = "Ngày đi: ";
             // 
-            // textBox3
+            // txtMaKhachHang
             // 
-            this.textBox3.Location = new System.Drawing.Point(208, 256);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(188, 22);
-            this.textBox3.TabIndex = 30;
+            this.txtMaKhachHang.Location = new System.Drawing.Point(208, 256);
+            this.txtMaKhachHang.Name = "txtMaKhachHang";
+            this.txtMaKhachHang.Size = new System.Drawing.Size(188, 22);
+            this.txtMaKhachHang.TabIndex = 30;
             // 
             // label7
             // 
@@ -205,12 +165,12 @@ namespace QuanLyBenXe
             this.label7.TabIndex = 29;
             this.label7.Text = "Mã khách hàng: ";
             // 
-            // textBox4
+            // txtMaXe
             // 
-            this.textBox4.Location = new System.Drawing.Point(208, 211);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(188, 22);
-            this.textBox4.TabIndex = 32;
+            this.txtMaXe.Location = new System.Drawing.Point(208, 211);
+            this.txtMaXe.Name = "txtMaXe";
+            this.txtMaXe.Size = new System.Drawing.Size(188, 22);
+            this.txtMaXe.TabIndex = 32;
             // 
             // label8
             // 
@@ -222,12 +182,12 @@ namespace QuanLyBenXe
             this.label8.TabIndex = 31;
             this.label8.Text = "Mã xe:";
             // 
-            // textBox5
+            // txtGiaVe
             // 
-            this.textBox5.Location = new System.Drawing.Point(208, 400);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(188, 22);
-            this.textBox5.TabIndex = 34;
+            this.txtGiaVe.Location = new System.Drawing.Point(208, 400);
+            this.txtGiaVe.Name = "txtGiaVe";
+            this.txtGiaVe.Size = new System.Drawing.Size(188, 22);
+            this.txtGiaVe.TabIndex = 34;
             // 
             // label9
             // 
@@ -248,95 +208,93 @@ namespace QuanLyBenXe
             this.btnTimKiem.Text = "Tìm Kiếm";
             this.btnTimKiem.UseVisualStyleBackColor = true;
             // 
-            // txtTimKiem
+            // dvgQuanLyLichTrinh
             // 
-            this.txtTimKiem.Location = new System.Drawing.Point(671, 493);
-            this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.Size = new System.Drawing.Size(181, 22);
-            this.txtTimKiem.TabIndex = 37;
+            this.dvgQuanLyLichTrinh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dvgQuanLyLichTrinh.Location = new System.Drawing.Point(448, 65);
+            this.dvgQuanLyLichTrinh.Name = "dvgQuanLyLichTrinh";
+            this.dvgQuanLyLichTrinh.RowHeadersWidth = 51;
+            this.dvgQuanLyLichTrinh.RowTemplate.Height = 24;
+            this.dvgQuanLyLichTrinh.Size = new System.Drawing.Size(672, 357);
+            this.dvgQuanLyLichTrinh.TabIndex = 35;
+            this.dvgQuanLyLichTrinh.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgQuanLyLichTrinh_CellContentClick);
             // 
-            // cbbTimKiem
+            // XMLTODB
             // 
-            this.cbbTimKiem.FormattingEnabled = true;
-            this.cbbTimKiem.Location = new System.Drawing.Point(448, 493);
-            this.cbbTimKiem.Name = "cbbTimKiem";
-            this.cbbTimKiem.Size = new System.Drawing.Size(187, 24);
-            this.cbbTimKiem.TabIndex = 36;
+            this.XMLTODB.Location = new System.Drawing.Point(55, 468);
+            this.XMLTODB.Name = "XMLTODB";
+            this.XMLTODB.Size = new System.Drawing.Size(267, 38);
+            this.XMLTODB.TabIndex = 40;
+            this.XMLTODB.Text = "Chuyển từ xml sang db";
+            this.XMLTODB.UseVisualStyleBackColor = true;
+            this.XMLTODB.Click += new System.EventHandler(this.XMLTODB_Click);
             // 
-            // grvQuanLyXe
+            // DBTOXML
             // 
-            this.grvQuanLyXe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grvQuanLyXe.Location = new System.Drawing.Point(448, 65);
-            this.grvQuanLyXe.Name = "grvQuanLyXe";
-            this.grvQuanLyXe.RowHeadersWidth = 51;
-            this.grvQuanLyXe.RowTemplate.Height = 24;
-            this.grvQuanLyXe.Size = new System.Drawing.Size(672, 357);
-            this.grvQuanLyXe.TabIndex = 35;
+            this.DBTOXML.Location = new System.Drawing.Point(380, 468);
+            this.DBTOXML.Name = "DBTOXML";
+            this.DBTOXML.Size = new System.Drawing.Size(267, 38);
+            this.DBTOXML.TabIndex = 41;
+            this.DBTOXML.Text = "Chuyển từ db sang xml";
+            this.DBTOXML.UseVisualStyleBackColor = true;
+            this.DBTOXML.Click += new System.EventHandler(this.DBTOXML_Click);
             // 
             // QuanLyLichTrinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1160, 605);
+            this.Controls.Add(this.DBTOXML);
+            this.Controls.Add(this.XMLTODB);
             this.Controls.Add(this.btnTimKiem);
-            this.Controls.Add(this.txtTimKiem);
-            this.Controls.Add(this.cbbTimKiem);
-            this.Controls.Add(this.grvQuanLyXe);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.dvgQuanLyLichTrinh);
+            this.Controls.Add(this.txtGiaVe);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txtMaXe);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtMaKhachHang);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtNgayDi);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtGioDi);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.btnXoa);
-            this.Controls.Add(this.btnThem);
-            this.Controls.Add(this.btnCapNhat);
-            this.Controls.Add(this.btnLamMoi);
-            this.Controls.Add(this.txtSoGhe);
-            this.Controls.Add(this.txtTenXe);
+            this.Controls.Add(this.txtMaTuyenXe);
+            this.Controls.Add(this.txtMaBenXe);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtMaXe);
+            this.Controls.Add(this.txtMaLichTrinh);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "QuanLyLichTrinh";
             this.Text = "QuanLyLichTrinh";
-            ((System.ComponentModel.ISupportInitialize)(this.grvQuanLyXe)).EndInit();
+            this.Load += new System.EventHandler(this.QuanLyLichTrinh_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dvgQuanLyLichTrinh)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnXoa;
-        private System.Windows.Forms.Button btnThem;
-        private System.Windows.Forms.Button btnCapNhat;
-        private System.Windows.Forms.Button btnLamMoi;
-        private System.Windows.Forms.TextBox txtSoGhe;
-        private System.Windows.Forms.TextBox txtTenXe;
+        private System.Windows.Forms.TextBox txtMaTuyenXe;
+        private System.Windows.Forms.TextBox txtMaBenXe;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtMaXe;
+        private System.Windows.Forms.TextBox txtMaLichTrinh;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtGioDi;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtNgayDi;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtMaKhachHang;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtMaXe;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtGiaVe;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnTimKiem;
-        private System.Windows.Forms.TextBox txtTimKiem;
-        private System.Windows.Forms.ComboBox cbbTimKiem;
-        private System.Windows.Forms.DataGridView grvQuanLyXe;
+        private System.Windows.Forms.DataGridView dvgQuanLyLichTrinh;
+        private System.Windows.Forms.Button XMLTODB;
+        private System.Windows.Forms.Button DBTOXML;
     }
 }

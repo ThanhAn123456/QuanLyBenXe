@@ -45,5 +45,11 @@ namespace QuanLyBenXe
             QuanLyBenXe quanLyBenXe = new QuanLyBenXe();
             quanLyBenXe.Show();
         }
+
+        private void quảnLýLịchTrìnhToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            QuanLyLichTrinh quanLyLichTrinh = new QuanLyLichTrinh();
+            quanLyLichTrinh.Show();
+        }
     }
 }
