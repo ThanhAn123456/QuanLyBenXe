@@ -59,6 +59,9 @@ namespace QuanLyBenXe
             this.radioButtonNu = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dateTimePickerNgaySinh = new System.Windows.Forms.DateTimePicker();
+            this.btnDbToXML = new System.Windows.Forms.Button();
+            this.btnXmlToDb = new System.Windows.Forms.Button();
+            this.showFileXml = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grvQuanLyKhachHang)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -76,7 +79,7 @@ namespace QuanLyBenXe
             this.quảnLýLịchTrìnhToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1118, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(1118, 28);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -84,41 +87,41 @@ namespace QuanLyBenXe
             // 
             this.trangChủToolStripMenuItem.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.trangChủToolStripMenuItem.Name = "trangChủToolStripMenuItem";
-            this.trangChủToolStripMenuItem.Size = new System.Drawing.Size(87, 26);
+            this.trangChủToolStripMenuItem.Size = new System.Drawing.Size(87, 24);
             this.trangChủToolStripMenuItem.Text = "Trang chủ";
             // 
             // quảnLýBếnXeToolStripMenuItem
             // 
             this.quảnLýBếnXeToolStripMenuItem.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.quảnLýBếnXeToolStripMenuItem.Name = "quảnLýBếnXeToolStripMenuItem";
-            this.quảnLýBếnXeToolStripMenuItem.Size = new System.Drawing.Size(121, 26);
+            this.quảnLýBếnXeToolStripMenuItem.Size = new System.Drawing.Size(121, 24);
             this.quảnLýBếnXeToolStripMenuItem.Text = "Quản lý bến xe";
             // 
             // quảnLýTuyếnXeToolStripMenuItem
             // 
             this.quảnLýTuyếnXeToolStripMenuItem.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.quảnLýTuyếnXeToolStripMenuItem.Name = "quảnLýTuyếnXeToolStripMenuItem";
-            this.quảnLýTuyếnXeToolStripMenuItem.Size = new System.Drawing.Size(132, 26);
+            this.quảnLýTuyếnXeToolStripMenuItem.Size = new System.Drawing.Size(132, 24);
             this.quảnLýTuyếnXeToolStripMenuItem.Text = "Quản lý tuyến xe";
             // 
             // quảnLýXeToolStripMenuItem
             // 
             this.quảnLýXeToolStripMenuItem.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.quảnLýXeToolStripMenuItem.Name = "quảnLýXeToolStripMenuItem";
-            this.quảnLýXeToolStripMenuItem.Size = new System.Drawing.Size(92, 26);
+            this.quảnLýXeToolStripMenuItem.Size = new System.Drawing.Size(92, 24);
             this.quảnLýXeToolStripMenuItem.Text = "Quản lý xe";
             // 
             // quảnLýKháchHàngToolStripMenuItem
             // 
             this.quảnLýKháchHàngToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.quảnLýKháchHàngToolStripMenuItem.Name = "quảnLýKháchHàngToolStripMenuItem";
-            this.quảnLýKháchHàngToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
+            this.quảnLýKháchHàngToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
             this.quảnLýKháchHàngToolStripMenuItem.Text = "Quản lý khách hàng";
             // 
             // quảnLýLịchTrìnhToolStripMenuItem
             // 
             this.quảnLýLịchTrìnhToolStripMenuItem.Name = "quảnLýLịchTrìnhToolStripMenuItem";
-            this.quảnLýLịchTrìnhToolStripMenuItem.Size = new System.Drawing.Size(134, 26);
+            this.quảnLýLịchTrìnhToolStripMenuItem.Size = new System.Drawing.Size(134, 24);
             this.quảnLýLịchTrìnhToolStripMenuItem.Text = "Quản lý lịch trình";
             // 
             // label1
@@ -238,6 +241,7 @@ namespace QuanLyBenXe
             this.btnLamMoi.TabIndex = 17;
             this.btnLamMoi.Text = "Làm mới";
             this.btnLamMoi.UseVisualStyleBackColor = true;
+            this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
             // 
             // btnThem
             // 
@@ -247,6 +251,7 @@ namespace QuanLyBenXe
             this.btnThem.TabIndex = 18;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnCapNhat
             // 
@@ -256,6 +261,7 @@ namespace QuanLyBenXe
             this.btnCapNhat.TabIndex = 19;
             this.btnCapNhat.Text = "Cập Nhật";
             this.btnCapNhat.UseVisualStyleBackColor = true;
+            this.btnCapNhat.Click += new System.EventHandler(this.btnCapNhat_Click);
             // 
             // btnXoa
             // 
@@ -265,11 +271,12 @@ namespace QuanLyBenXe
             this.btnXoa.TabIndex = 20;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // cbbTimKiem
             // 
             this.cbbTimKiem.FormattingEnabled = true;
-            this.cbbTimKiem.Location = new System.Drawing.Point(434, 379);
+            this.cbbTimKiem.Location = new System.Drawing.Point(660, 419);
             this.cbbTimKiem.Name = "cbbTimKiem";
             this.cbbTimKiem.Size = new System.Drawing.Size(187, 24);
             this.cbbTimKiem.TabIndex = 21;
@@ -289,6 +296,7 @@ namespace QuanLyBenXe
             this.btnTimKiem.TabIndex = 23;
             this.btnTimKiem.Text = "Tìm Kiếm";
             this.btnTimKiem.UseVisualStyleBackColor = true;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // radioButtonNam
             // 
@@ -329,11 +337,44 @@ namespace QuanLyBenXe
             this.dateTimePickerNgaySinh.Size = new System.Drawing.Size(188, 22);
             this.dateTimePickerNgaySinh.TabIndex = 27;
             // 
+            // btnDbToXML
+            // 
+            this.btnDbToXML.Location = new System.Drawing.Point(382, 371);
+            this.btnDbToXML.Name = "btnDbToXML";
+            this.btnDbToXML.Size = new System.Drawing.Size(111, 38);
+            this.btnDbToXML.TabIndex = 28;
+            this.btnDbToXML.Text = "DbToXML";
+            this.btnDbToXML.UseVisualStyleBackColor = true;
+            this.btnDbToXML.Click += new System.EventHandler(this.btnDbToXML_Click);
+            // 
+            // btnXmlToDb
+            // 
+            this.btnXmlToDb.Location = new System.Drawing.Point(382, 428);
+            this.btnXmlToDb.Name = "btnXmlToDb";
+            this.btnXmlToDb.Size = new System.Drawing.Size(111, 38);
+            this.btnXmlToDb.TabIndex = 29;
+            this.btnXmlToDb.Text = "XmlToDb";
+            this.btnXmlToDb.UseVisualStyleBackColor = true;
+            this.btnXmlToDb.Click += new System.EventHandler(this.btnXmlToDb_Click);
+            // 
+            // showFileXml
+            // 
+            this.showFileXml.Location = new System.Drawing.Point(910, 428);
+            this.showFileXml.Name = "showFileXml";
+            this.showFileXml.Size = new System.Drawing.Size(111, 38);
+            this.showFileXml.TabIndex = 30;
+            this.showFileXml.Text = "Xem file XML";
+            this.showFileXml.UseVisualStyleBackColor = true;
+            this.showFileXml.Click += new System.EventHandler(this.showFileXml_Click);
+            // 
             // QuanLyKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1118, 489);
+            this.Controls.Add(this.showFileXml);
+            this.Controls.Add(this.btnXmlToDb);
+            this.Controls.Add(this.btnDbToXML);
             this.Controls.Add(this.dateTimePickerNgaySinh);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnTimKiem);
@@ -401,5 +442,8 @@ namespace QuanLyBenXe
         private System.Windows.Forms.RadioButton radioButtonNu;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DateTimePicker dateTimePickerNgaySinh;
+        private System.Windows.Forms.Button btnDbToXML;
+        private System.Windows.Forms.Button btnXmlToDb;
+        private System.Windows.Forms.Button showFileXml;
     }
 }

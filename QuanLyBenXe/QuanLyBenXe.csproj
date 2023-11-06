@@ -133,9 +133,5 @@
   <ItemGroup>
     <None Include="Resources\benxe.jpg" />
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="quanlybenxe.xml" />
-    <Content Include="quanlytuyenxe.xml" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -19,7 +19,7 @@ namespace QuanLyBenXe
             try
             {
                 con = new SqlConnection();
-                con.ConnectionString = @"Data Source=DESKTOP-BVPV5HU;Initial Catalog=QuanLyBenXeKhach2;Integrated Security=True";
+                con.ConnectionString = @"Data Source=LAPTOP-4QICIB15\SQLEXPRESS;Initial Catalog=QuanLyBenXeKhach2;Integrated Security=True";
             }
             catch (Exception ex)
             {
