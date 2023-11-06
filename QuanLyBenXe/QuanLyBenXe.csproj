@@ -102,6 +102,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="QuanLyBenXe.resx">
+      <DependentUpon>QuanLyBenXe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyTuyenXe.resx">
+      <DependentUpon>QuanLyTuyenXe.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="QuanLyKhachHang.resx">
       <DependentUpon>QuanLyKhachHang.cs</DependentUpon>
     </EmbeddedResource>
@@ -126,6 +132,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\benxe.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="quanlybenxe.xml" />
+    <Content Include="quanlytuyenxe.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
