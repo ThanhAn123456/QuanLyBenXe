@@ -51,6 +51,9 @@ namespace QuanLyBenXe
             this.cbbTimKiem = new System.Windows.Forms.ComboBox();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.btnTimKiem = new System.Windows.Forms.Button();
+            this.btnDbToXML = new System.Windows.Forms.Button();
+            this.btnXmlToDb = new System.Windows.Forms.Button();
+            this.showFileXml = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grvQuanLyXe)).BeginInit();
             this.SuspendLayout();
@@ -113,7 +116,7 @@ namespace QuanLyBenXe
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(417, 64);
+            this.label1.Location = new System.Drawing.Point(424, 41);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(169, 35);
             this.label1.TabIndex = 2;
@@ -173,12 +176,13 @@ namespace QuanLyBenXe
             // grvQuanLyXe
             // 
             this.grvQuanLyXe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grvQuanLyXe.Location = new System.Drawing.Point(406, 127);
+            this.grvQuanLyXe.Location = new System.Drawing.Point(406, 97);
             this.grvQuanLyXe.Name = "grvQuanLyXe";
             this.grvQuanLyXe.RowHeadersWidth = 51;
             this.grvQuanLyXe.RowTemplate.Height = 24;
-            this.grvQuanLyXe.Size = new System.Drawing.Size(672, 155);
+            this.grvQuanLyXe.Size = new System.Drawing.Size(672, 223);
             this.grvQuanLyXe.TabIndex = 9;
+            this.grvQuanLyXe.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grvQuanLyXe_CellClick);
             // 
             // btnLamMoi
             // 
@@ -188,15 +192,17 @@ namespace QuanLyBenXe
             this.btnLamMoi.TabIndex = 10;
             this.btnLamMoi.Text = "Làm mới";
             this.btnLamMoi.UseVisualStyleBackColor = true;
+            this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
             // 
             // btnCapNhat
             // 
-            this.btnCapNhat.Location = new System.Drawing.Point(45, 367);
+            this.btnCapNhat.Location = new System.Drawing.Point(45, 342);
             this.btnCapNhat.Name = "btnCapNhat";
             this.btnCapNhat.Size = new System.Drawing.Size(111, 38);
             this.btnCapNhat.TabIndex = 11;
             this.btnCapNhat.Text = "Cập Nhật";
             this.btnCapNhat.UseVisualStyleBackColor = true;
+            this.btnCapNhat.Click += new System.EventHandler(this.btnCapNhat_Click);
             // 
             // btnThem
             // 
@@ -206,39 +212,72 @@ namespace QuanLyBenXe
             this.btnThem.TabIndex = 12;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(205, 367);
+            this.btnXoa.Location = new System.Drawing.Point(205, 342);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(111, 38);
             this.btnXoa.TabIndex = 13;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // cbbTimKiem
             // 
             this.cbbTimKiem.FormattingEnabled = true;
-            this.cbbTimKiem.Location = new System.Drawing.Point(406, 306);
+            this.cbbTimKiem.Location = new System.Drawing.Point(406, 356);
             this.cbbTimKiem.Name = "cbbTimKiem";
             this.cbbTimKiem.Size = new System.Drawing.Size(187, 24);
             this.cbbTimKiem.TabIndex = 14;
             // 
             // txtTimKiem
             // 
-            this.txtTimKiem.Location = new System.Drawing.Point(621, 306);
+            this.txtTimKiem.Location = new System.Drawing.Point(613, 356);
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(188, 22);
             this.txtTimKiem.TabIndex = 15;
             // 
             // btnTimKiem
             // 
-            this.btnTimKiem.Location = new System.Drawing.Point(911, 298);
+            this.btnTimKiem.Location = new System.Drawing.Point(909, 348);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(111, 38);
             this.btnTimKiem.TabIndex = 16;
             this.btnTimKiem.Text = "Tìm Kiếm";
             this.btnTimKiem.UseVisualStyleBackColor = true;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
+            // 
+            // btnDbToXML
+            // 
+            this.btnDbToXML.Location = new System.Drawing.Point(45, 386);
+            this.btnDbToXML.Name = "btnDbToXML";
+            this.btnDbToXML.Size = new System.Drawing.Size(111, 38);
+            this.btnDbToXML.TabIndex = 17;
+            this.btnDbToXML.Text = "DbToXML";
+            this.btnDbToXML.UseVisualStyleBackColor = true;
+            this.btnDbToXML.Click += new System.EventHandler(this.btnDbToXML_Click);
+            // 
+            // btnXmlToDb
+            // 
+            this.btnXmlToDb.Location = new System.Drawing.Point(205, 386);
+            this.btnXmlToDb.Name = "btnXmlToDb";
+            this.btnXmlToDb.Size = new System.Drawing.Size(111, 38);
+            this.btnXmlToDb.TabIndex = 18;
+            this.btnXmlToDb.Text = "XmlToDb";
+            this.btnXmlToDb.UseVisualStyleBackColor = true;
+            this.btnXmlToDb.Click += new System.EventHandler(this.btnXmlToDb_Click);
+            // 
+            // showFileXml
+            // 
+            this.showFileXml.Location = new System.Drawing.Point(909, 392);
+            this.showFileXml.Name = "showFileXml";
+            this.showFileXml.Size = new System.Drawing.Size(111, 38);
+            this.showFileXml.TabIndex = 19;
+            this.showFileXml.Text = "Xem file XML";
+            this.showFileXml.UseVisualStyleBackColor = true;
+            this.showFileXml.Click += new System.EventHandler(this.showFileXml_Click);
             // 
             // QuanLyXe
             // 
@@ -246,6 +285,9 @@ namespace QuanLyBenXe
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1118, 450);
+            this.Controls.Add(this.showFileXml);
+            this.Controls.Add(this.btnXmlToDb);
+            this.Controls.Add(this.btnDbToXML);
             this.Controls.Add(this.btnTimKiem);
             this.Controls.Add(this.txtTimKiem);
             this.Controls.Add(this.cbbTimKiem);
@@ -297,5 +339,8 @@ namespace QuanLyBenXe
         private System.Windows.Forms.ComboBox cbbTimKiem;
         private System.Windows.Forms.TextBox txtTimKiem;
         private System.Windows.Forms.Button btnTimKiem;
+        private System.Windows.Forms.Button btnDbToXML;
+        private System.Windows.Forms.Button btnXmlToDb;
+        private System.Windows.Forms.Button showFileXml;
     }
 }

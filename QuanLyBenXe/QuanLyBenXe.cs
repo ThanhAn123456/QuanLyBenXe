@@ -21,8 +21,7 @@ namespace QuanLyBenXe
         string path = Application.StartupPath + "\\data\\quanlybenxe.xml";
         public QuanLyBenXe()
         {
-            InitializeComponent();
-            
+            InitializeComponent();          
         }
         private void QuanLyBenXe_Load(object sender, EventArgs e)
         {
