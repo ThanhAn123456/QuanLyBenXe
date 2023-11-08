@@ -46,10 +46,12 @@ namespace QuanLyBenXe
             this.label8 = new System.Windows.Forms.Label();
             this.txtGiaVe = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.btnTimKiem = new System.Windows.Forms.Button();
+            this.btnThemLichTrinh = new System.Windows.Forms.Button();
             this.dvgQuanLyLichTrinh = new System.Windows.Forms.DataGridView();
             this.XMLTODB = new System.Windows.Forms.Button();
             this.DBTOXML = new System.Windows.Forms.Button();
+            this.btnSuaLichTrinh = new System.Windows.Forms.Button();
+            this.btnXoaLichTrinh = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dvgQuanLyLichTrinh)).BeginInit();
             this.SuspendLayout();
             // 
@@ -199,14 +201,15 @@ namespace QuanLyBenXe
             this.label9.TabIndex = 33;
             this.label9.Text = "Giá vé: ";
             // 
-            // btnTimKiem
+            // btnThemLichTrinh
             // 
-            this.btnTimKiem.Location = new System.Drawing.Point(935, 485);
-            this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(111, 38);
-            this.btnTimKiem.TabIndex = 38;
-            this.btnTimKiem.Text = "Tìm Kiếm";
-            this.btnTimKiem.UseVisualStyleBackColor = true;
+            this.btnThemLichTrinh.Location = new System.Drawing.Point(59, 523);
+            this.btnThemLichTrinh.Name = "btnThemLichTrinh";
+            this.btnThemLichTrinh.Size = new System.Drawing.Size(111, 38);
+            this.btnThemLichTrinh.TabIndex = 38;
+            this.btnThemLichTrinh.Text = "Thêm";
+            this.btnThemLichTrinh.UseVisualStyleBackColor = true;
+            this.btnThemLichTrinh.Click += new System.EventHandler(this.btnThemLichTrinh_Click);
             // 
             // dvgQuanLyLichTrinh
             // 
@@ -239,14 +242,36 @@ namespace QuanLyBenXe
             this.DBTOXML.UseVisualStyleBackColor = true;
             this.DBTOXML.Click += new System.EventHandler(this.DBTOXML_Click);
             // 
+            // btnSuaLichTrinh
+            // 
+            this.btnSuaLichTrinh.Location = new System.Drawing.Point(211, 523);
+            this.btnSuaLichTrinh.Name = "btnSuaLichTrinh";
+            this.btnSuaLichTrinh.Size = new System.Drawing.Size(111, 38);
+            this.btnSuaLichTrinh.TabIndex = 42;
+            this.btnSuaLichTrinh.Text = "Sửa";
+            this.btnSuaLichTrinh.UseVisualStyleBackColor = true;
+            this.btnSuaLichTrinh.Click += new System.EventHandler(this.btnSuaLichTrinh_Click);
+            // 
+            // btnXoaLichTrinh
+            // 
+            this.btnXoaLichTrinh.Location = new System.Drawing.Point(371, 523);
+            this.btnXoaLichTrinh.Name = "btnXoaLichTrinh";
+            this.btnXoaLichTrinh.Size = new System.Drawing.Size(111, 38);
+            this.btnXoaLichTrinh.TabIndex = 43;
+            this.btnXoaLichTrinh.Text = "Xóa";
+            this.btnXoaLichTrinh.UseVisualStyleBackColor = true;
+            this.btnXoaLichTrinh.Click += new System.EventHandler(this.btnXoaLichTrinh_Click);
+            // 
             // QuanLyLichTrinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1160, 605);
+            this.Controls.Add(this.btnXoaLichTrinh);
+            this.Controls.Add(this.btnSuaLichTrinh);
             this.Controls.Add(this.DBTOXML);
             this.Controls.Add(this.XMLTODB);
-            this.Controls.Add(this.btnTimKiem);
+            this.Controls.Add(this.btnThemLichTrinh);
             this.Controls.Add(this.dvgQuanLyLichTrinh);
             this.Controls.Add(this.txtGiaVe);
             this.Controls.Add(this.label9);
@@ -292,9 +317,11 @@ namespace QuanLyBenXe
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtGiaVe;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button btnTimKiem;
+        private System.Windows.Forms.Button btnThemLichTrinh;
         private System.Windows.Forms.DataGridView dvgQuanLyLichTrinh;
         private System.Windows.Forms.Button XMLTODB;
         private System.Windows.Forms.Button DBTOXML;
+        private System.Windows.Forms.Button btnSuaLichTrinh;
+        private System.Windows.Forms.Button btnXoaLichTrinh;
     }
 }
