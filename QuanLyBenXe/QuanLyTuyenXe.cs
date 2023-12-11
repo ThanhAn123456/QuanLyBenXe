@@ -17,7 +17,7 @@ namespace QuanLyBenXe
     {
         XULYDULIEU xuly = new XULYDULIEU();
         String sql;
-        String path = "../../quanlytuyenxe.xml";
+        string path = Application.StartupPath + "\\data\\quanlytuyenxe.xml";
         public QuanLyTuyenXe()
         {
             InitializeComponent();
@@ -88,6 +88,15 @@ namespace QuanLyBenXe
             txtMaTuyenXe.Enabled = true;
             sql = "select * from tuyenxe";
             dgvQuanLyTuyenXe.DataSource = xuly.getTable(sql);
+            string sql2 = "select matuyenxe from tuyenxe ";
+            cbQuanLyTuyenXe.Items.Clear();
+            DataTable dt = xuly.getTable(sql2);
+            int index = 0;
+            foreach (DataRow row in dt.Rows)
+            {
+                object item = row[index];
+                cbQuanLyTuyenXe.Items.Add(item);
+            }
         }
 
         private void btnLamMoi_Click(object sender, EventArgs e)
@@ -131,11 +140,17 @@ namespace QuanLyBenXe
 
                 xuly.capNhatTungBang(path, "tuyenxe");
                 MessageBox.Show("Cập nhập SQL server thành công");
+                reset();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
             }
+        }
+
+        private void showFileXml_Click(object sender, EventArgs e)
+        {
+            xuly.ViewXML(path);
         }
     }
 }

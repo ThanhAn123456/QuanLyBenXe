@@ -46,6 +46,7 @@ namespace QuanLyBenXe
             this.cbQuanLyTuyenXe = new System.Windows.Forms.ComboBox();
             this.btnDbToXml = new System.Windows.Forms.Button();
             this.btnXmlToDb = new System.Windows.Forms.Button();
+            this.showFileXml = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQuanLyTuyenXe)).BeginInit();
             this.SuspendLayout();
             // 
@@ -181,7 +182,7 @@ namespace QuanLyBenXe
             // btnTimKiem
             // 
             this.btnTimKiem.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTimKiem.Location = new System.Drawing.Point(852, 277);
+            this.btnTimKiem.Location = new System.Drawing.Point(853, 289);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(136, 41);
             this.btnTimKiem.TabIndex = 13;
@@ -221,12 +222,24 @@ namespace QuanLyBenXe
             this.btnXmlToDb.UseVisualStyleBackColor = true;
             this.btnXmlToDb.Click += new System.EventHandler(this.btnXmlToDb_Click);
             // 
+            // showFileXml
+            // 
+            this.showFileXml.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.showFileXml.Location = new System.Drawing.Point(615, 447);
+            this.showFileXml.Name = "showFileXml";
+            this.showFileXml.Size = new System.Drawing.Size(200, 41);
+            this.showFileXml.TabIndex = 17;
+            this.showFileXml.Text = "Xem file XML";
+            this.showFileXml.UseVisualStyleBackColor = true;
+            this.showFileXml.Click += new System.EventHandler(this.showFileXml_Click);
+            // 
             // QuanLyTuyenXe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(1019, 500);
+            this.Controls.Add(this.showFileXml);
             this.Controls.Add(this.btnXmlToDb);
             this.Controls.Add(this.btnDbToXml);
             this.Controls.Add(this.cbQuanLyTuyenXe);
@@ -272,5 +285,6 @@ namespace QuanLyBenXe
         private System.Windows.Forms.ComboBox cbQuanLyTuyenXe;
         private System.Windows.Forms.Button btnDbToXml;
         private System.Windows.Forms.Button btnXmlToDb;
+        private System.Windows.Forms.Button showFileXml;
     }
 }

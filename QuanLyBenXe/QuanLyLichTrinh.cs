@@ -56,6 +56,7 @@ namespace QuanLyBenXe
 
                 xuly.capNhatTungBang(path, "lichtrinh");
                 MessageBox.Show("Cập nhập SQL server thành công");
+                reset();
             }
             catch (Exception ex)
             {

@@ -89,6 +89,15 @@ namespace QuanLyBenXe
             txtMaBenXe.Enabled = true;
             sql = "select * from benxe";
             dgvQuanLyBenXe.DataSource = xuly.getTable(sql);
+            string sql2 = "select mabenxe from benxe ";
+            cbQuanLyBenXe.Items.Clear();
+            DataTable dt = xuly.getTable(sql2);
+            int index = 0;
+            foreach (DataRow row in dt.Rows)
+            {
+                object item = row[index];
+                cbQuanLyBenXe.Items.Add(item);
+            }
         }
         private void btnLamMoi_Click(object sender, EventArgs e)
         {
@@ -137,6 +146,7 @@ namespace QuanLyBenXe
 
                 xuly.capNhatTungBang(path,"benxe");
                 MessageBox.Show("Cập nhập SQL server thành công");
+                reset();
             }
             catch (Exception ex)
             {
